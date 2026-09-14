@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
@@ -23,6 +24,13 @@ app.use('/api/reviews', require('./routes/review.routes'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'BusBook API running' }));
+
+// Serve React frontend build (production)
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
 
 // Error handler
 app.use((err, req, res, next) => {
