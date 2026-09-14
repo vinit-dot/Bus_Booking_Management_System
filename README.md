@@ -21,17 +21,7 @@
 
 A full-featured online bus ticket booking platform built with MongoDB, Express, React (Vite), and Node.js — search buses, select seats, book tickets, and manage everything from an admin dashboard.
 
----
 
-## 📸 Screenshots
-
-<!-- Replace these with your own screenshots. Upload images to a `screenshots/` folder in your repo, then reference them like below. -->
-
-| Home Page | Bus Search Results | Seat Selection |
-|---|---|---|
-| ![Home](./screenshots/home.png) | ![Search](./screenshots/search.png) | ![Seats](./screenshots/seats.png) |
-
----
 
 ## 📋 Features
 
